@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi StoryMap con Leyenda Dinámica</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div id="slides">
+                <!-- Diapositivas -->
+                <div class="slide" data-lat="4.654131" data-lng="-74.114078" data-zoom="18">
+                    <h2>Índice</h2>
+                    <div id="index"></div>
+                </div>
+                <!-- Más diapositivas según sea necesario -->
+
+                <div class="slide" data-lat="4.654131" data-lng="-74.114078" data-zoom="18">
+                    <h2>¿Cuál es el contexto previo a la intervención en el Terminal Salitre?</h2>
+                    <figure>
+                        <img src="assets/images/terminal_antes.jpg" alt="Imagen 1">
+                        <figcaption>Terminal de Salitre antes de la intervención</figcaption> <!-- Título de la imagen -->
+                    </figure>
+                    <p>Actores: <u><strong style="color: red;">50</strong></u></p>
+                    <p>Residuos: <u><strong style="color: red;">112</strong></u></p>
+                    <p>Escenarios: <u><strong style="color: red;">12</strong></u></p>
+
+                    <p>Los resultados del mapa de contexto y actores muestran la acera y calle que bordea el terminal por fuera a la llegada y salida de las personas viajeras. Es escasa la 
+                    presencia de canecas. En la parte interna algunos vendedores de comercio del terminal comentan que pasan 5 veces al día personal de aseo para hacer limpieza del lugar, el 
+                    cual pasa por cada uno de los establecimientos comerciales recogiendo los residuos separados reciclables de no reciclables. A pesar de que son pocas las canecas dentro del 
+                    terminal, los vendedores o observan que este sea un problema porque cada establecimiento tiene canecas o están cerca de ellos y están señalizadas por colores para separar los 
+                    residuos. El terminal se mantiene limpio permanentemente.</p>
+                </div>
+
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="backToIndexButton">Volver al Índice</div>
+            <div id="legend">
+                <button id="toggle-legend">Minimizar</button> <!-- Botón para minimizar la leyenda -->
+                <div id="legend-content">
+                    <!-- Aquí se generará el contenido de la leyenda dinámicamente -->
+                </div>
+            </div>
+        </div>    
+    </div>
+    <script src="lib/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
